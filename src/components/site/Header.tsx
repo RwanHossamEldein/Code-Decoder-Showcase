@@ -2,12 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Languages } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { logoUrl } from "@/lib/shots";
+import { markUrl } from "@/lib/shots";
 
 export function Logo() {
   return (
     <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="CodeDecoder home">
-      <img src={logoUrl} alt="" width={40} height={40} className="h-10 w-10 rounded-lg object-cover object-top" style={{ objectPosition: "50% 20%" }} />
+      <img src={markUrl} alt="" width={36} height={36} className="h-9 w-9 rounded-lg" />
       <span className="font-display text-lg font-bold" dir="ltr">Code<span className="text-primary">Decoder</span></span>
     </Link>
   );
