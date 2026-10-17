@@ -1,6 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import { Mail } from "lucide-react";
-import { useI18n, SUPPORT_EMAIL } from "@/lib/i18n";
+import { MessageSquare } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 import { Logo } from "./Header";
 
 export function Footer() {
@@ -16,18 +15,16 @@ export function Footer() {
         <nav aria-label="Footer">
           <h2 className="text-sm font-semibold">{t.footer.nav}</h2>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/" className="hover:text-primary">{t.nav.home}</Link></li>
-            <li><Link to="/features" className="hover:text-primary">{t.nav.features}</Link></li>
-            <li><Link to="/showcase" className="hover:text-primary">{t.nav.showcase}</Link></li>
-            <li><Link to="/about" className="hover:text-primary">{t.nav.about}</Link></li>
-            <li><Link to="/contact" className="hover:text-primary">{t.nav.contact}</Link></li>
+            <li><a href="/#home" className="hover:text-primary">{t.nav.home}</a></li>
+            <li><a href="/#features" className="hover:text-primary">{t.nav.features}</a></li>
+            <li><a href="/#showcase" className="hover:text-primary">{t.nav.showcase}</a></li>
+            <li><a href="/#about" className="hover:text-primary">{t.nav.about}</a></li>
+            <li><a href="/#contact" className="hover:text-primary">{t.nav.contact}</a></li>
           </ul>
         </nav>
         <div>
           <h2 className="text-sm font-semibold">{t.footer.contact}</h2>
-          <a href={`mailto:${SUPPORT_EMAIL}`} className="mt-4 inline-flex items-center gap-2 break-all text-sm text-muted-foreground hover:text-primary" dir="ltr">
-            <Mail className="h-4 w-4 shrink-0" /> {SUPPORT_EMAIL}
-          </a>
+          <a href="/#contact" className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"><MessageSquare className="h-4 w-4" />{t.contact.kicker}</a>
         </div>
       </div>
       <div className="border-t py-6 text-center text-xs text-muted-foreground">{t.footer.rights}</div>
