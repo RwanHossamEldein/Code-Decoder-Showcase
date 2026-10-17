@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { ContactSection } from "@/components/site/WebsiteSections";
 
 
@@ -11,6 +11,7 @@ export const Route = createFileRoute("/contact")({
     { property: "og:title", content: "Contact & Feedback — CodeDecoder" },
     { property: "og:description", content: "Questions, bugs or ideas? Contact the CodeDecoder team." },
   ] }),
+  beforeLoad: () => { throw redirect({ to: "/", hash: "contact" }); },
   component: Page,
 });
 
