@@ -1,25 +1,25 @@
 import { createServerFn } from "@tanstack/react-start";
-import { z } from "zod";
+import { createClient } from "@supabase/supabase-js";
+import { contactSchema } from "./contact-schema";
+import type { Database } from "@/integrations/supabase/types";
 
-const schema = z.object({
-  name: z.string().trim().min(2).max(100),
-  email: z.string().trim().email().max(255),
-  type: z.string().trim().min(1).max(50),
-  subject: z.string().trim().min(1).max(150),
-  message: z.string().trim().min(10).max(5000),
-  website: z.string().max(0).optional(), // honeypot
-  elapsedMs: z.number().min(2000), // too-fast submits are treated as bots
-  hasAttachment: z.boolean(),
-});
-
-/**
- * Delivery target: supportcodedecoder@gmail.com.
- * INTEGRATION REQUIRED: no email service is configured yet. Once one is connected
- * (server-side secret), send the message here. Until then this returns
- * `not_configured` so the UI never shows a fake success.
- */
 export const sendContactMessage = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => schema.parse(data))
-  .handler(async () => {
-    return { ok: false as const, reason: "not_configured" as const };
+  .inputValidator((data: unknown) => contactSchema.parse(data))
+  .handler(async ({ data }) => {
+    const url = process.env["SUPABASE_URL"];
+    const key = process.env["SUPABASE_PUBLISHABLE_KEY"];
+    if (!url || !key) return { ok: false };
+    const client = createClient<Database>(url, key, {
+      auth: { persistSession: false, autoRefreshToken: false },
+      global: { fetch: (input, init) => {
+        const headers = new Headers(init?.headers);
+        if (key.startsWith("sb_") && headers.get("Authorization") === `Bearer ${key}`) headers.delete("Authorization");
+        headers.set("apikey", key);
+        return fetch(input, { ...init, headers });
+      } },
+    });
+    const { error } = await client.from("website_feedback").insert({
+      name: data.name, email: data.email, type: data.type, subject: data.subject, message: data.message,
+    });
+    return { ok: !error };
   });
