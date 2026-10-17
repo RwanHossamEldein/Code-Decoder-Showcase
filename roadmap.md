@@ -1,0 +1,3 @@
+- [ ] Combine website sections with a branded cover and scrolling navigation.
+- [ ] Explain all features and present app screenshots and about content.
+- [ ] Add and verify a working feedback form.
