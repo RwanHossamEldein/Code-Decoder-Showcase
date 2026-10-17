@@ -1,18 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PageHero } from "@/components/site/ui";
-import { useI18n } from "@/lib/i18n";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { ContactSection } from "@/components/site/WebsiteSections";
+
 
 export const Route = createFileRoute("/contact")({
   head: () => ({ meta: [
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
     { title: "Contact & Feedback — CodeDecoder" },
     { name: "description", content: "Questions, bugs or ideas? Contact the CodeDecoder team." },
     { property: "og:title", content: "Contact & Feedback — CodeDecoder" },
     { property: "og:description", content: "Questions, bugs or ideas? Contact the CodeDecoder team." },
   ] }),
+  beforeLoad: () => { throw redirect({ to: "/", hash: "contact" }); },
   component: Page,
 });
 
 function Page() {
-  const { t } = useI18n();
-  return <PageHero kicker={t.contact.kicker} title={t.contact.title} desc={t.contact.desc} />;
+  return <ContactSection />;
 }
