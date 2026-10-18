@@ -2,3 +2,6 @@
 - [x] Explain all features and present app screenshots and about content.
 - [x] Add and verify a working feedback form.
 - [ ] Remove blue website colors and add smooth motion; verify the scrolling experience.
+- [ ] Add website and Play Store buttons (store destination awaits the real link).
+- [ ] Replace the starter README with project-specific documentation.
+- [ ] Remove the subject field and verify feedback submission.
