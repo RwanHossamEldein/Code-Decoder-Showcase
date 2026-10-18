@@ -1,29 +1,103 @@
-# Welcome to your Lovable project
+# CodeDecoder — Product Website
 
-This project was built with [Lovable](https://lovable.dev).
+A bilingual website introducing CodeDecoder: an AI-powered companion for understanding code, visualizing algorithms, debugging, and learning in English or Arabic.
 
-## Build with Lovable
+[Visit the website](https://codedecoder-landing-page.lovable.app)
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+> This repository contains the **product website**, not the mobile application or its AI analysis engine. The Play Store destination has not been supplied; its button is intentionally disabled and marked “Coming soon.”
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+## Website experience
 
-## Development
+- One scrolling document with a branded cover, introduction, grouped features, four-step workflow, screenshot gallery, about section, and feedback form.
+- English and Arabic content with right-to-left layout and a remembered language preference.
+- Charcoal surfaces, lime branding, warm gold accents, subtle entrance animations, floating logo, scroll reveals, and reduced-motion support.
+- Original application screenshots with full-size viewing dialogs.
+- Mobile navigation, keyboard focus indicators, and page-specific sharing metadata.
+- Feedback validation, loading/error/success states, and secure message storage in Lovable Cloud.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Product capabilities presented
+
+Code explanations and line-by-line walkthroughs; general summaries; algorithm visualization; error detection and suggested corrections; expected output; time and space complexity; file and image input; bilingual support; app themes and profiles; algorithm library; session history.
+
+These are capabilities described for the CodeDecoder product, not tools executed by this website.
+
+## Technology
+
+| Area | Stack |
+| --- | --- |
+| Application | TanStack Start, TanStack Router, React 19, TypeScript |
+| Styling | Tailwind CSS v4, semantic CSS tokens |
+| Interface | Radix UI / shadcn-style controls, Lucide icons |
+| Data and validation | TanStack Query, Zod |
+| Feedback storage | Lovable Cloud with row-level access restrictions |
+| Tests | Vitest, Testing Library |
+| Development | Vite, Bun |
+
+## Local development
+
+Install a current Node.js LTS release and Bun, clone your repository, and open its root directory:
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev
 ```
 
-## Built with
+Use the address printed by the development server. The managed Lovable preview runs at port 8080.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+### Configuration
+
+Lovable manages the connected backend configuration. For an independently configured environment, the browser client expects `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, and `VITE_SUPABASE_PROJECT_ID`; feedback server functions expect `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` at runtime.
+
+Do not commit credentials or copy server-only secrets into browser variables. Do not edit generated integration files to change hosted settings. A disconnected local environment can render the website, but feedback submission needs a reachable backend with the existing table, grants, policies, and throttle trigger.
+
+## Useful commands
+
+```sh
+bun run test          # Run the test suite
+bun run test:watch    # Watch tests while developing
+bun run lint          # Check lint rules
+bun run format        # Format the project
+bun run build         # Create a production build outside the managed preview
+```
+
+## Project map
+
+```text
+src/
+  assets/                    Managed image pointers
+  components/site/           Header, footer, scrolling sections, feedback
+  components/ui/             Shared interface controls
+  integrations/supabase/     Generated Cloud clients and types
+  lib/                       Translations, asset URLs, feedback schema/function
+  routes/                    Root layout, home, legacy section redirects
+  test/                      Validation and routing tests
+  styles.css                 Theme tokens, animations, shared styles
+AGENTS.md                    Project architecture conventions
+roadmap.md                   Current task checklist
+```
+
+## Feedback flow and privacy
+
+Visitors provide **name, email, message type, and message**; no subject is requested. The same Zod schema validates entries before sending and on the server. A hidden honeypot and minimum completion time discourage automated spam; the database additionally throttles submissions by email.
+
+The public server function inserts into `website_feedback` using an insert-only, row-level-security-scoped client. It derives the legacy stored subject from the validated message type for compatibility. Visitors cannot list or read submitted personal information. Failed submissions keep the visitor's entries available for retry.
+
+**Messages are stored in Lovable Cloud; email delivery is not configured.** Authorized project members can review submissions through Lovable's backend tools. Avoid including real visitor information in screenshots, tests, or public exports.
+
+## Maintaining the website
+
+- Update English and Arabic copy together in `src/lib/i18n.tsx`.
+- Keep section content in `WebsiteSections.tsx`; home composes the sections in order.
+- Preserve redirects from `/features`, `/showcase`, `/about`, and `/contact` to home anchors.
+- Define palette and animation styles in `src/styles.css`; respect reduced-motion preferences.
+- Use managed asset pointers from `src/lib/shots.ts` rather than hotlinked images.
+- Replace the current website destination if a separate product web app is provided. Enable the Play Store button only when its actual listing URL is available.
+- Run validation and routing tests after changing the form or navigation. Check feedback end-to-end against the connected backend before release.
+
+## Publishing
+
+Publish through the Lovable editor to update the hosted website. Editing the preview does not automatically update the published version. GitHub integration can keep source changes synchronized with your connected repository.
+
+## License and assets
+
+No open-source license is declared in this repository. The supplied CodeDecoder branding and screenshots should not be redistributed without the owner's permission.

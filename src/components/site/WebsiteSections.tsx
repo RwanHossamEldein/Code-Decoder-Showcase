@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrainCircuit, List, Zap, Play, Bug, Wrench, Check, Terminal, Clock, Database, FileCode, Image, Languages, Moon, User, ArrowDown, ArrowUpRight, X, BookOpen, History } from "lucide-react";
+import { BrainCircuit, List, Zap, Play, Bug, Wrench, Check, Terminal, Clock, Database, FileCode, Image, Languages, Moon, User, ArrowDown, ArrowUpRight, Globe, BookOpen, History } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useI18n } from "@/lib/i18n";
@@ -16,13 +16,17 @@ export function Cover() {
     <img src={bannerUrl} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-15" />
     <div className="cover-shade absolute inset-0 -z-10" />
     <div className="mx-auto flex max-w-5xl flex-col items-center px-5 pb-14 pt-14 text-center sm:pb-16 sm:pt-20">
-      <img src={markUrl} alt="CodeDecoder logo" width={112} height={112} className="size-24 rounded-2xl sm:size-28" />
+      <img src={markUrl} alt="CodeDecoder logo" width={112} height={112} className="cover-logo size-24 rounded-2xl sm:size-28" />
       <p className="mt-7 font-mono text-xs text-primary">{t.hero.eyebrow}</p>
-      <h1 className="mt-4 font-display text-5xl font-bold sm:text-7xl" dir="ltr">Code<span className="text-primary">Decoder</span></h1>
+      <h1 className="cover-enter mt-4 font-display text-5xl font-bold sm:text-7xl" dir="ltr">Code<span className="text-primary">Decoder</span></h1>
       <h2 className="mt-5 text-xl font-medium sm:text-3xl">{t.hero.title1} <span className="text-accent">{t.hero.title2}</span> {t.hero.title3}</h2>
-      <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t.hero.desc}</p>
+      <p className="cover-enter cover-copy mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t.hero.desc}</p>
+      <div className="cover-enter cover-actions mt-7 flex flex-wrap justify-center gap-3">
+        <Button size="lg" asChild className="h-12"><a href="https://codedecoder-landing-page.lovable.app" target="_blank" rel="noopener noreferrer"><Globe />{lang === "ar" ? "الموقع الإلكتروني" : "Visit website"}<ArrowUpRight /></a></Button>
+        <Button size="lg" variant="outline" disabled className="h-12"><Play />{lang === "ar" ? "Play Store · قريبًا" : "Play Store · Coming soon"}</Button>
+      </div>
       <div className="mt-8 flex flex-wrap justify-center gap-3"><Button size="lg" asChild className="h-12"><a href="#features">{t.hero.secondary}<ArrowDown /></a></Button><Button size="lg" variant="outline" asChild className="h-12"><a href="#showcase">{lang === "ar" ? "شاهد التطبيق" : "See the app"}<ArrowUpRight /></a></Button></div>
-      <a href="#intro" className="mt-10 flex items-center gap-2 text-xs text-muted-foreground"><ArrowDown className="size-4" />{lang === "ar" ? "اكتشف المزيد" : "Discover more"}</a>
+      <a href="#intro" className="scroll-cue mt-10 flex items-center gap-2 text-xs text-muted-foreground"><ArrowDown className="size-4" />{lang === "ar" ? "اكتشف المزيد" : "Discover more"}</a>
     </div>
   </section>;
 }
