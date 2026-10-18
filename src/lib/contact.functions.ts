@@ -19,7 +19,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
       } },
     });
     const { error } = await client.from("website_feedback").insert({
-      name: data.name, email: data.email, type: data.type, subject: data.subject, message: data.message,
+      name: data.name, email: data.email, type: data.type, subject: data.type, message: data.message,
     });
     return { ok: !error };
   });

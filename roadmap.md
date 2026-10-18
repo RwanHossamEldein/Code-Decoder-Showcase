@@ -1,4 +1,8 @@
 - [x] Combine website sections with a branded cover and scrolling navigation.
 - [x] Explain all features and present app screenshots and about content.
 - [x] Add and verify a working feedback form.
-- [ ] Remove blue website colors and add smooth motion; verify the scrolling experience.
+- [x] Remove blue website colors and add smooth motion; verify the scrolling experience.
+- [x] Add website and Play Store buttons; use the current published website and mark Play Store coming soon.
+- [ ] Activate Play Store destination — blocked on the actual listing URL from the user.
+- [x] Replace the starter README with project-specific documentation.
+- [x] Remove the subject field and verify feedback submission.

@@ -11,3 +11,4 @@
 
 - Keep website section content in shared site sections, composing the home page as one scrolling document; legacy content routes redirect to home section anchors so every entry point opens the scrolling website.
 - Feedback uses a shared Zod schema, a public server function with an RLS-scoped insert-only client, and database throttling; visitors cannot read submitted personal information.
+- Derive the legacy stored feedback subject from its validated message type on the server, so the form never requires a subject and existing stored submissions remain compatible.

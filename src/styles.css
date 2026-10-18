@@ -39,21 +39,21 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.145 0.012 250);
-  --foreground: oklch(0.97 0.005 250);
-  --card: oklch(0.19 0.014 250);
-  --card-foreground: oklch(0.97 0.005 250);
-  --popover: oklch(0.19 0.014 250);
-  --popover-foreground: oklch(0.97 0.005 250);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.97 0 0);
+  --card: oklch(0.19 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.19 0 0);
+  --popover-foreground: oklch(0.97 0 0);
   --primary: oklch(0.8 0.2 130);
   --primary-foreground: oklch(0.16 0.03 135);
-  --secondary: oklch(0.23 0.016 250);
-  --secondary-foreground: oklch(0.95 0.005 250);
-  --muted: oklch(0.23 0.016 250);
-  --muted-foreground: oklch(0.74 0.02 250);
-  --accent: oklch(0.82 0.13 205);
-  --accent-foreground: oklch(0.16 0.03 220);
-  --glow: oklch(0.62 0.17 280);
+  --secondary: oklch(0.23 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.23 0 0);
+  --muted-foreground: oklch(0.74 0 0);
+  --accent: oklch(0.84 0.14 85);
+  --accent-foreground: oklch(0.16 0.03 85);
+  --glow: oklch(0.7 0.15 15);
   --destructive: oklch(0.68 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
   --success: oklch(0.8 0.17 150);
@@ -120,6 +120,18 @@
 }
 
 .cover-shade { background: var(--cover-overlay); }
+.cover > img { filter: grayscale(1); }
+.cover-logo { animation: float-y 7s ease-in-out infinite; }
+.cover-enter { animation: fade-up .8s ease-out both; }
+.cover-copy { animation-delay: .12s; }
+.cover-actions { animation-delay: .24s; }
+.scroll-cue svg { animation: float-y 3s ease-in-out infinite; }
+.feature-item { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.feature-item:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--primary) 40%, var(--border)); box-shadow: var(--shadow-card); }
+@media (prefers-reduced-motion: reduce) {
+  .cover-logo, .cover-enter, .scroll-cue svg { animation: none; }
+  .feature-item:hover { transform: none; }
+}
 .section-inner { max-width: 72rem; margin-inline: auto; padding-inline: 1.25rem; }
 .section-space { padding-block: 5rem; scroll-margin-top: 5rem; }
 #home, #intro { scroll-margin-top: 4rem; }
