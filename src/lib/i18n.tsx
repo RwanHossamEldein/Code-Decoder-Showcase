@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import type { ShotKey } from "./shots";
+import type { ShotKey, WebShotKey } from "./shots";
 
 export type Lang = "en" | "ar";
 
@@ -110,6 +110,17 @@ const en = {
       { title: "Learn algorithms", shots: [{ key: "algorithms", t: "Algorithms library", d: "Searchable sorting algorithms with their time complexity at a glance." }] },
       { title: "Revisit your work", shots: [{ key: "history", t: "Session history", d: "Every session saved with its language, summary and timestamp." }] },
     ] as { title: string; shots: { key: ShotKey; t: string; d: string }[] }[],
+    webT: "On the web",
+    webD: "The same CodeDecoder experience in your browser.",
+    web: [
+      { key: "onboarding", t: "Onboarding", d: "A guided welcome to your algorithm learning journey." },
+      { key: "login", t: "Sign in", d: "Simple sign-in with guest access when you just want to explore." },
+      { key: "home", t: "Code Explanation home", d: "Editor, explanation panel, and your AI mentor side by side." },
+      { key: "algorithms", t: "Algorithms on the web", d: "The full algorithms library with search and complexity badges." },
+      { key: "appearance", t: "Appearance settings", d: "Dark, light, or system theme — and English or Arabic." },
+    ] as { key: WebShotKey; t: string; d: string }[],
+    phoneT: "On your phone",
+    phoneD: "Real screens from the mobile app. Tap any screen to view it full size.",
     close: "Close",
     view: "View full size",
     prev: "Previous",
@@ -265,6 +276,17 @@ const ar: Dict = {
       { title: "تعلّم الخوارزميات", shots: [{ key: "algorithms", t: "مكتبة الخوارزميات", d: "خوارزميات ترتيب قابلة للبحث مع تعقيدها الزمني." }] },
       { title: "راجع عملك", shots: [{ key: "history", t: "سجل الجلسات", d: "كل جلسة محفوظة مع لغتها وملخصها ووقتها." }] },
     ],
+    webT: "على الويب",
+    webD: "نفس تجربة CodeDecoder في متصفحك.",
+    web: [
+      { key: "onboarding", t: "الجولة التعريفية", d: "ترحيب موجّه يبدأ رحلتك في تعلم الخوارزميات." },
+      { key: "login", t: "تسجيل الدخول", d: "تسجيل دخول بسيط مع إمكانية المتابعة كضيف." },
+      { key: "home", t: "الرئيسية وشرح الكود", d: "المحرر ولوحة الشرح والمرشد الذكي جنبًا إلى جنب." },
+      { key: "algorithms", t: "الخوارزميات على الويب", d: "مكتبة الخوارزميات كاملة مع البحث وشارات التعقيد." },
+      { key: "appearance", t: "إعدادات المظهر", d: "سمة داكنة أو فاتحة أو تلقائية — وبالعربية أو الإنجليزية." },
+    ],
+    phoneT: "على هاتفك",
+    phoneD: "شاشات حقيقية من تطبيق الموبايل. اضغط على أي شاشة لعرضها بالحجم الكامل.",
     close: "إغلاق", view: "عرض بالحجم الكامل", prev: "السابق", next: "التالي",
   },
   about: {

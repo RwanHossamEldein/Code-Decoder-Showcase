@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { BrainCircuit, List, Zap, Play, Bug, Wrench, Check, Terminal, Clock, Database, FileCode, Image, Languages, Moon, User, ArrowDown, ArrowUpRight, Globe, BookOpen, History } from "lucide-react";
+import { BrainCircuit, List, Zap, Play, Bug, Wrench, Check, Terminal, Clock, Database, FileCode, Image, Languages, Moon, User, ArrowDown, ArrowUpRight, Globe, BookOpen, History, Smartphone, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useI18n } from "@/lib/i18n";
-import { shots, markUrl, bannerUrl } from "@/lib/shots";
+import { shots, webShots, markUrl, bannerUrl } from "@/lib/shots";
 import { SectionHead, Reveal } from "./ui";
 import { FeedbackForm } from "./FeedbackForm";
 
@@ -52,7 +52,12 @@ export function HowSection() {
 export function ShowcaseSection() {
   const { t } = useI18n();
   const [selected, setSelected] = useState<{ src: string; title: string } | null>(null);
-  return <section id="showcase" className="section-space border-b"><div className="section-inner"><SectionHead kicker={t.showcase.kicker} title={t.showcase.title} /><div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4">{t.showcase.groups.flatMap(group => group.shots).map((shot, i) => <Reveal key={shot.key} delay={i * 60}><Button variant="ghost" onClick={() => setSelected({ src: shots[shot.key], title: shot.t })} className="h-auto w-full overflow-hidden rounded-lg p-0 hover:bg-transparent" aria-label={`${t.showcase.view}: ${shot.t}`}><img src={shots[shot.key]} alt={shot.t} width={720} height={1280} loading="lazy" className="aspect-[9/16] w-full object-contain transition-transform duration-300 hover:scale-[1.02]" /></Button><h3 className="mt-5 text-lg font-semibold">{shot.t}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{shot.d}</p></Reveal>)}</div></div><Dialog open={Boolean(selected)} onOpenChange={open => { if (!open) setSelected(null); }}><DialogContent className="max-w-md"><DialogTitle>{selected?.title}</DialogTitle>{selected && <img src={selected.src} alt={selected.title} className="mx-auto max-h-[75vh] w-auto object-contain" />}</DialogContent></Dialog></section>;
+  return <section id="showcase" className="section-space border-b"><div className="section-inner"><SectionHead kicker={t.showcase.kicker} title={t.showcase.title} desc={t.showcase.desc} />
+    <Reveal className="mt-14"><h3 className="flex items-center gap-3 text-xl font-semibold"><Smartphone className="size-5 shrink-0 text-primary" />{t.showcase.phoneT}</h3><p className="mt-2 text-sm text-muted-foreground">{t.showcase.phoneD}</p></Reveal>
+    <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4">{t.showcase.groups.flatMap(group => group.shots).map((shot, i) => <Reveal key={shot.key} delay={i * 60}><Button variant="ghost" onClick={() => setSelected({ src: shots[shot.key], title: shot.t })} className="h-auto w-full overflow-hidden rounded-lg p-0 hover:bg-transparent" aria-label={`${t.showcase.view}: ${shot.t}`}><img src={shots[shot.key]} alt={shot.t} width={720} height={1280} loading="lazy" className="aspect-[9/16] w-full object-contain transition-transform duration-300 hover:scale-[1.02]" /></Button><h4 className="mt-5 text-lg font-semibold">{shot.t}</h4><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{shot.d}</p></Reveal>)}</div>
+    <Reveal className="mt-16 border-t pt-10"><h3 className="flex items-center gap-3 text-xl font-semibold"><Monitor className="size-5 shrink-0 text-accent" />{t.showcase.webT}</h3><p className="mt-2 text-sm text-muted-foreground">{t.showcase.webD}</p></Reveal>
+    <div className="mt-8 grid gap-x-5 gap-y-10 sm:grid-cols-2">{t.showcase.web.map((shot, i) => <Reveal key={shot.key} delay={i * 60}><Button variant="ghost" onClick={() => setSelected({ src: webShots[shot.key], title: shot.t })} className="h-auto w-full overflow-hidden rounded-lg border p-0 hover:bg-transparent" aria-label={`${t.showcase.view}: ${shot.t}`}><img src={webShots[shot.key]} alt={shot.t} width={1920} height={920} loading="lazy" className="aspect-[1920/920] w-full object-cover transition-transform duration-300 hover:scale-[1.02]" /></Button><h4 className="mt-5 text-lg font-semibold">{shot.t}</h4><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{shot.d}</p></Reveal>)}</div>
+  </div><Dialog open={Boolean(selected)} onOpenChange={open => { if (!open) setSelected(null); }}><DialogContent className="max-w-4xl"><DialogTitle>{selected?.title}</DialogTitle>{selected && <img src={selected.src} alt={selected.title} className="mx-auto max-h-[75vh] w-auto object-contain" />}</DialogContent></Dialog></section>;
 }
 
 export function AboutSection() {
