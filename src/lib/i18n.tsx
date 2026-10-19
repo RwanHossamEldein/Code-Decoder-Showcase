@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import type { ShotKey } from "./shots";
+import type { ShotKey, WebShotKey } from "./shots";
 
 export type Lang = "en" | "ar";
 
@@ -276,6 +276,17 @@ const ar: Dict = {
       { title: "تعلّم الخوارزميات", shots: [{ key: "algorithms", t: "مكتبة الخوارزميات", d: "خوارزميات ترتيب قابلة للبحث مع تعقيدها الزمني." }] },
       { title: "راجع عملك", shots: [{ key: "history", t: "سجل الجلسات", d: "كل جلسة محفوظة مع لغتها وملخصها ووقتها." }] },
     ],
+    webT: "على الويب",
+    webD: "نفس تجربة CodeDecoder في متصفحك.",
+    web: [
+      { key: "onboarding", t: "الجولة التعريفية", d: "ترحيب موجّه يبدأ رحلتك في تعلم الخوارزميات." },
+      { key: "login", t: "تسجيل الدخول", d: "تسجيل دخول بسيط مع إمكانية المتابعة كضيف." },
+      { key: "home", t: "الرئيسية وشرح الكود", d: "المحرر ولوحة الشرح والمرشد الذكي جنبًا إلى جنب." },
+      { key: "algorithms", t: "الخوارزميات على الويب", d: "مكتبة الخوارزميات كاملة مع البحث وشارات التعقيد." },
+      { key: "appearance", t: "إعدادات المظهر", d: "سمة داكنة أو فاتحة أو تلقائية — وبالعربية أو الإنجليزية." },
+    ],
+    phoneT: "على هاتفك",
+    phoneD: "شاشات حقيقية من تطبيق الموبايل. اضغط على أي شاشة لعرضها بالحجم الكامل.",
     close: "إغلاق", view: "عرض بالحجم الكامل", prev: "السابق", next: "التالي",
   },
   about: {
