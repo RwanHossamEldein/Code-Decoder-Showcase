@@ -45,21 +45,21 @@
   --card-foreground: oklch(0.97 0 0);
   --popover: oklch(0.19 0 0);
   --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.8 0.2 130);
+  --primary: #8dc63f;
   --primary-foreground: oklch(0.16 0.03 135);
   --secondary: oklch(0.23 0 0);
   --secondary-foreground: oklch(0.95 0 0);
   --muted: oklch(0.23 0 0);
   --muted-foreground: oklch(0.74 0 0);
-  --accent: oklch(0.72 0.19 145);
+  --accent: #8dc63f;
   --accent-foreground: oklch(0.16 0.03 135);
-  --glow: oklch(0.7 0.18 150);
+  --glow: #8dc63f;
   --destructive: oklch(0.68 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --success: oklch(0.8 0.17 150);
+  --success: #8dc63f;
   --border: oklch(1 0 0 / 9%);
   --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.8 0.2 130);
+  --ring: #8dc63f;
   --gradient-brand: linear-gradient(120deg, var(--primary), var(--accent));
   --gradient-hero: radial-gradient(60% 50% at 75% 20%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 70%),
     radial-gradient(45% 40% at 10% 10%, color-mix(in oklab, var(--glow) 20%, transparent), transparent 70%),
