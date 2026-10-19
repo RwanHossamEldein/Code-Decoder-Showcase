@@ -1,27 +1,39 @@
 # CodeDecoder — Product Website
 
-A bilingual website introducing CodeDecoder: an AI-powered companion for understanding code, visualizing algorithms, debugging, and learning in English or Arabic.
+The official bilingual website for **CodeDecoder**: an AI-powered companion that explains code, visualizes algorithms, helps you debug, and teaches you to read code with confidence — in **English or Arabic**, on **mobile and web**.
 
-[Visit the website](https://codedecoder-landing-page.lovable.app)
+🌐 **[Visit the website](https://codedecoder-landing-page.lovable.app)**
 
-> This repository contains the **product website**, not the mobile application or its AI analysis engine. The Play Store destination has not been supplied; its button is intentionally disabled and marked “Coming soon.”
+> This repository contains the **product website**, not the mobile application or its AI analysis engine. The Play Store destination has not been supplied yet; its button is intentionally disabled and marked “Coming soon.”
 
-## Website experience
+---
 
-- One scrolling document with a branded cover, introduction, grouped features, four-step workflow, screenshot gallery, about section, and feedback form.
-- English and Arabic content with right-to-left layout and a remembered language preference.
-- Charcoal surfaces, lime branding, warm gold accents, subtle entrance animations, floating logo, scroll reveals, and reduced-motion support.
-- Original application screenshots with full-size viewing dialogs.
-- Mobile navigation, keyboard focus indicators, and page-specific sharing metadata.
-- Feedback validation, loading/error/success states, and secure message storage in Lovable Cloud.
+## ✨ What CodeDecoder does
 
-### Product capabilities presented
+| Capability | Description |
+| --- | --- |
+| AI code explanations | Line-by-line walkthroughs or a general summary of any snippet |
+| Algorithm visualization | Step-by-step animations that make logic visible |
+| Debugging assistance | Error detection, explanations, and suggested corrected code |
+| Output prediction | What the code will print or return before you run it |
+| Complexity analysis | Time and space complexity explained in plain language |
+| Flexible input | Paste code, upload a file, or snap a photo of code |
+| Bilingual | Full English and Arabic support with RTL layout |
+| Personalization | Light/dark themes, profiles, and saved session history |
+| Algorithms library | Searchable classic algorithms with complexity at a glance |
 
-Code explanations and line-by-line walkthroughs; general summaries; algorithm visualization; error detection and suggested corrections; expected output; time and space complexity; file and image input; bilingual support; app themes and profiles; algorithm library; session history.
+These are capabilities of the CodeDecoder product, not tools executed by this website.
 
-These are capabilities described for the CodeDecoder product, not tools executed by this website.
+## 🖥️ Website experience
 
-## Technology
+- **One scrolling document** — branded cover, introduction, grouped features, four-step workflow, screenshot showcase (phone + web), about section, and feedback form.
+- **Bilingual EN/AR** with right-to-left layout and a remembered language preference.
+- **Brand-true design** — charcoal surfaces, the app's lime-green branding, subtle entrance animations, floating logo, scroll reveals, and reduced-motion support.
+- **Real screenshots** from the mobile app and the web app, with full-size viewing dialogs.
+- **Accessible** — mobile navigation, keyboard focus indicators, and page-specific sharing metadata.
+- **Working feedback form** — validation, loading/error/success states, and secure message storage in Lovable Cloud.
+
+## 🛠️ Technology
 
 | Area | Stack |
 | --- | --- |
@@ -33,7 +45,7 @@ These are capabilities described for the CodeDecoder product, not tools executed
 | Tests | Vitest, Testing Library |
 | Development | Vite, Bun |
 
-## Local development
+## 🚀 Local development
 
 Install a current Node.js LTS release and Bun, clone your repository, and open its root directory:
 
@@ -50,7 +62,7 @@ Lovable manages the connected backend configuration. For an independently config
 
 Do not commit credentials or copy server-only secrets into browser variables. Do not edit generated integration files to change hosted settings. A disconnected local environment can render the website, but feedback submission needs a reachable backend with the existing table, grants, policies, and throttle trigger.
 
-## Useful commands
+## 📜 Useful commands
 
 ```sh
 bun run test          # Run the test suite
@@ -60,11 +72,11 @@ bun run format        # Format the project
 bun run build         # Create a production build outside the managed preview
 ```
 
-## Project map
+## 🗂️ Project map
 
 ```text
 src/
-  assets/                    Managed image pointers
+  assets/                    Managed image pointers (app + web screenshots, branding)
   components/site/           Header, footer, scrolling sections, feedback
   components/ui/             Shared interface controls
   integrations/supabase/     Generated Cloud clients and types
@@ -76,7 +88,7 @@ AGENTS.md                    Project architecture conventions
 roadmap.md                   Current task checklist
 ```
 
-## Feedback flow and privacy
+## 💬 Feedback flow and privacy
 
 Visitors provide **name, email, message type, and message**; no subject is requested. The same Zod schema validates entries before sending and on the server. A hidden honeypot and minimum completion time discourage automated spam; the database additionally throttles submissions by email.
 
@@ -84,7 +96,7 @@ The public server function inserts into `website_feedback` using an insert-only,
 
 **Messages are stored in Lovable Cloud; email delivery is not configured.** Authorized project members can review submissions through Lovable's backend tools. Avoid including real visitor information in screenshots, tests, or public exports.
 
-## Maintaining the website
+## 🧰 Maintaining the website
 
 - Update English and Arabic copy together in `src/lib/i18n.tsx`.
 - Keep section content in `WebsiteSections.tsx`; home composes the sections in order.
@@ -94,10 +106,10 @@ The public server function inserts into `website_feedback` using an insert-only,
 - Replace the current website destination if a separate product web app is provided. Enable the Play Store button only when its actual listing URL is available.
 - Run validation and routing tests after changing the form or navigation. Check feedback end-to-end against the connected backend before release.
 
-## Publishing
+## 📦 Publishing
 
 Publish through the Lovable editor to update the hosted website. Editing the preview does not automatically update the published version. GitHub integration can keep source changes synchronized with your connected repository.
 
-## License and assets
+## 📄 License and assets
 
 No open-source license is declared in this repository. The supplied CodeDecoder branding and screenshots should not be redistributed without the owner's permission.

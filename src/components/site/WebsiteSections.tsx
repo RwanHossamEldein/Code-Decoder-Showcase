@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrainCircuit, List, Zap, Play, Bug, Wrench, Check, Terminal, Clock, Database, FileCode, Image, Languages, Moon, User, ArrowDown, ArrowUpRight, Globe, BookOpen, History } from "lucide-react";
+import { BrainCircuit, List, Zap, Play, Bug, Wrench, Check, Terminal, Clock, Database, FileCode, Image, Languages, Moon, User, ArrowDown, ArrowUpRight, Globe, BookOpen, History, Smartphone, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useI18n } from "@/lib/i18n";
