@@ -1,115 +1,182 @@
-# CodeDecoder — Product Website
+<div align="center">
 
-The official bilingual website for **CodeDecoder**: an AI-powered companion that explains code, visualizes algorithms, helps you debug, and teaches you to read code with confidence — in **English or Arabic**, on **mobile and web**.
+<img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/4779d599-8be9-482a-bb7d-afba71bc7aaa/mark.webp" alt="CodeDecoder logo" width="120" />
 
-🌐 **[Visit the website](https://codedecoder-landing-page.lovable.app)**
+# CodeDecoder
 
-> This repository contains the **product website**, not the mobile application or its AI analysis engine. The Play Store destination has not been supplied yet; its button is intentionally disabled and marked “Coming soon.”
+**Understand code. Visualize logic.**
+
+An AI-powered companion that explains code, visualizes algorithms, helps you debug, and teaches you to read code with confidence — in **English** and **Arabic**, on **mobile** and **web**.
+
+[![Website](https://img.shields.io/badge/Website-Live-8dc63f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://codedecoder-landing-page.lovable.app)
+[![Play Store](https://img.shields.io/badge/Google_Play-Coming_soon-555?style=for-the-badge&logo=googleplay&logoColor=white)](#)
+
+![React](https://img.shields.io/badge/React_19-20232a?logo=react&logoColor=61dafb)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white)
+![TanStack](https://img.shields.io/badge/TanStack_Start-ff4154?logo=reactquery&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_v4-06b6d4?logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6e9f18?logo=vitest&logoColor=white)
+
+<img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/d29a2e1b-754c-4d78-a5bb-c43c2a7c3251/banner.webp" alt="CodeDecoder banner" width="100%" />
+
+</div>
 
 ---
 
-## ✨ What CodeDecoder does
+## Table of contents
 
-| Capability | Description |
-| --- | --- |
-| AI code explanations | Line-by-line walkthroughs or a general summary of any snippet |
-| Algorithm visualization | Step-by-step animations that make logic visible |
-| Debugging assistance | Error detection, explanations, and suggested corrected code |
-| Output prediction | What the code will print or return before you run it |
-| Complexity analysis | Time and space complexity explained in plain language |
-| Flexible input | Paste code, upload a file, or snap a photo of code |
-| Bilingual | Full English and Arabic support with RTL layout |
-| Personalization | Light/dark themes, profiles, and saved session history |
-| Algorithms library | Searchable classic algorithms with complexity at a glance |
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Website highlights](#-website-highlights)
+- [Tech stack](#-tech-stack)
+- [Getting started](#-getting-started)
+- [Project structure](#-project-structure)
+- [Feedback and privacy](#-feedback-and-privacy)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-These are capabilities of the CodeDecoder product, not tools executed by this website.
+> This repository contains the **product website**, not the mobile app or its AI engine.
 
-## 🖥️ Website experience
+---
 
-- **One scrolling document** — branded cover, introduction, grouped features, four-step workflow, screenshot showcase (phone + web), about section, and feedback form.
-- **Bilingual EN/AR** with right-to-left layout and a remembered language preference.
-- **Brand-true design** — charcoal surfaces, the app's lime-green branding, subtle entrance animations, floating logo, scroll reveals, and reduced-motion support.
-- **Real screenshots** from the mobile app and the web app, with full-size viewing dialogs.
-- **Accessible** — mobile navigation, keyboard focus indicators, and page-specific sharing metadata.
-- **Working feedback form** — validation, loading/error/success states, and secure message storage in Lovable Cloud.
+## ✨ Features
 
-## 🛠️ Technology
+| | Feature | Description |
+|---|---|---|
+| 🧠 | **AI code explanations** | Line-by-line walkthroughs or a general summary of any snippet |
+| 🎬 | **Algorithm visualization** | Step-by-step animations that make logic visible |
+| 🐞 | **Debugging assistance** | Detects errors, explains them, and suggests corrected code |
+| 🔮 | **Output prediction** | Shows what the code prints or returns before you run it |
+| ⏱️ | **Complexity analysis** | Time and space complexity in plain language |
+| 📷 | **Flexible input** | Paste code, upload a file, or snap a photo of code |
+| 🌍 | **Bilingual** | Full English and Arabic support with RTL layout |
+| 🎨 | **Personalization** | Light/dark themes, profiles, and saved session history |
+| 📚 | **Algorithms library** | Classic sorting and searching algorithms with complexity badges |
 
-| Area | Stack |
-| --- | --- |
-| Application | TanStack Start, TanStack Router, React 19, TypeScript |
-| Styling | Tailwind CSS v4, semantic CSS tokens |
-| Interface | Radix UI / shadcn-style controls, Lucide icons |
-| Data and validation | TanStack Query, Zod |
-| Feedback storage | Lovable Cloud with row-level access restrictions |
-| Tests | Vitest, Testing Library |
-| Development | Vite, Bun |
+---
 
-## 🚀 Local development
+## 📸 Screenshots
 
-Install a current Node.js LTS release and Bun, clone your repository, and open its root directory:
+### 📱 Mobile app
+
+<table>
+  <tr>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/0bb2c268-1d8e-49d6-a8bd-a8762aa941a5/02_code_editor.webp" width="200" /><br/><b>Code editor</b></td>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/0dc20cd6-5b1c-46d4-a7e5-7027e4ff32d1/03_ai_mentor.webp" width="200" /><br/><b>AI mentor</b></td>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/6b137f23-a388-49e9-8624-6d709d27f861/01_algorithms.webp" width="200" /><br/><b>Algorithms library</b></td>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/ff3a9afd-9f4a-49d2-ab08-1c237be2bde3/04_history.webp" width="200" /><br/><b>Session history</b></td>
+  </tr>
+</table>
+
+### 💻 Web app
+
+<table>
+  <tr>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/ee5d08bb-3d4b-4c96-8aeb-c728bbca2d4c/web_onboarding.webp" width="420" /><br/><b>Onboarding</b></td>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/89f83b79-f5e0-4ee8-8ec8-6666df4bf7f2/web_login.webp" width="420" /><br/><b>Sign in</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/bd64ed44-cb16-4bbd-85b3-e33ec88e5799/web_home.webp" width="420" /><br/><b>Home workspace</b></td>
+    <td align="center"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/884a8f24-d79b-41c7-826a-c0ed488e7667/web_algorithms.webp" width="420" /><br/><b>Algorithms</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/938ddb5f-b549-4fa2-9b16-fbd38a8ee24f/web_appearance.webp" width="420" /><br/><b>Appearance settings</b></td>
+  </tr>
+</table>
+
+---
+
+## 🖥️ Website highlights
+
+- **Single scrolling page** — cover, intro, features, workflow, screenshots, about, feedback.
+- **Bilingual EN / AR** with automatic RTL layout and a remembered language choice.
+- **Brand-true design** — charcoal surfaces with the app's green (`#8dc63f`).
+- **Motion** — entrance animations, floating logo, scroll reveals; respects `prefers-reduced-motion`.
+- **Accessible** — keyboard focus, mobile navigation, per-page share metadata.
+- **Working feedback form** — validation, loading/error/success states, secure storage.
+
+---
+
+## 🛠️ Tech stack
+
+| Layer | Tools |
+|---|---|
+| Framework | TanStack Start, TanStack Router, React 19, TypeScript |
+| Styling | Tailwind CSS v4, semantic CSS design tokens |
+| UI | Radix UI / shadcn components, Lucide icons |
+| Data & validation | TanStack Query, Zod |
+| Backend | Lovable Cloud (database with row-level security) |
+| Testing | Vitest, Testing Library |
+| Tooling | Vite, Bun, ESLint, Prettier |
+
+---
+
+## 🚀 Getting started
 
 ```sh
+git clone <your-repo-url>
+cd codedecoder-website
 bun install
 bun run dev
 ```
 
-Use the address printed by the development server. The managed Lovable preview runs at port 8080.
+| Command | Purpose |
+|---|---|
+| `bun run dev` | Start the dev server |
+| `bun run test` | Run the test suite |
+| `bun run lint` | Lint the code |
+| `bun run format` | Format with Prettier |
+| `bun run build` | Production build |
 
-### Configuration
+**Environment:** the browser needs `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_SUPABASE_PROJECT_ID`; server functions need `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY`. Never commit secrets.
 
-Lovable manages the connected backend configuration. For an independently configured environment, the browser client expects `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, and `VITE_SUPABASE_PROJECT_ID`; feedback server functions expect `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` at runtime.
+---
 
-Do not commit credentials or copy server-only secrets into browser variables. Do not edit generated integration files to change hosted settings. A disconnected local environment can render the website, but feedback submission needs a reachable backend with the existing table, grants, policies, and throttle trigger.
-
-## 📜 Useful commands
-
-```sh
-bun run test          # Run the test suite
-bun run test:watch    # Watch tests while developing
-bun run lint          # Check lint rules
-bun run format        # Format the project
-bun run build         # Create a production build outside the managed preview
-```
-
-## 🗂️ Project map
+## 🗂️ Project structure
 
 ```text
 src/
-  assets/                    Managed image pointers (app + web screenshots, branding)
-  components/site/           Header, footer, scrolling sections, feedback
-  components/ui/             Shared interface controls
-  integrations/supabase/     Generated Cloud clients and types
-  lib/                       Translations, asset URLs, feedback schema/function
-  routes/                    Root layout, home, legacy section redirects
-  test/                      Validation and routing tests
-  styles.css                 Theme tokens, animations, shared styles
-AGENTS.md                    Project architecture conventions
-roadmap.md                   Current task checklist
+├── assets/               # Managed image pointers (screens, branding)
+├── components/
+│   ├── site/             # Header, footer, page sections, feedback form
+│   └── ui/               # Shared UI primitives
+├── integrations/         # Generated backend clients and types
+├── lib/                  # i18n, image URLs, feedback schema + server function
+├── routes/               # Home page + legacy redirects (/features, /about, ...)
+├── test/                 # Validation and routing tests
+└── styles.css            # Theme tokens and animations
 ```
 
-## 💬 Feedback flow and privacy
+---
 
-Visitors provide **name, email, message type, and message**; no subject is requested. The same Zod schema validates entries before sending and on the server. A hidden honeypot and minimum completion time discourage automated spam; the database additionally throttles submissions by email.
+## 💬 Feedback and privacy
 
-The public server function inserts into `website_feedback` using an insert-only, row-level-security-scoped client. It derives the legacy stored subject from the validated message type for compatibility. Visitors cannot list or read submitted personal information. Failed submissions keep the visitor's entries available for retry.
+```text
+Visitor form ──► Zod validation (client) ──► Server function ──► Zod validation (server)
+                                                   │
+                                                   ▼
+                               website_feedback table (insert-only, RLS, throttled)
+```
 
-**Messages are stored in Lovable Cloud; email delivery is not configured.** Authorized project members can review submissions through Lovable's backend tools. Avoid including real visitor information in screenshots, tests, or public exports.
+- Fields: **name, email, message type, message**.
+- Spam protection: hidden honeypot, minimum fill time, per-email database throttle.
+- Visitors can only insert — they can never read submissions.
+- Email delivery is not configured; messages are stored in the backend.
 
-## 🧰 Maintaining the website
+---
 
-- Update English and Arabic copy together in `src/lib/i18n.tsx`.
-- Keep section content in `WebsiteSections.tsx`; home composes the sections in order.
-- Preserve redirects from `/features`, `/showcase`, `/about`, and `/contact` to home anchors.
-- Define palette and animation styles in `src/styles.css`; respect reduced-motion preferences.
-- Use managed asset pointers from `src/lib/shots.ts` rather than hotlinked images.
-- Replace the current website destination if a separate product web app is provided. Enable the Play Store button only when its actual listing URL is available.
-- Run validation and routing tests after changing the form or navigation. Check feedback end-to-end against the connected backend before release.
+## 🤝 Contributing
 
-## 📦 Publishing
+1. Create a branch: `git checkout -b feat/short-description`
+2. Keep English and Arabic copy in sync in `src/lib/i18n.tsx`.
+3. Run `bun run test` and `bun run lint`.
+4. Use [Conventional Commits](https://www.conventionalcommits.org/): `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`.
 
-Publish through the Lovable editor to update the hosted website. Editing the preview does not automatically update the published version. GitHub integration can keep source changes synchronized with your connected repository.
+---
 
-## 📄 License and assets
+## 📄 License
 
-No open-source license is declared in this repository. The supplied CodeDecoder branding and screenshots should not be redistributed without the owner's permission.
+No open-source license is declared. CodeDecoder branding and screenshots belong to their owner and may not be redistributed without permission.
+
+<div align="center"><sub>Made with 💚 by the CodeDecoder team</sub></div>
