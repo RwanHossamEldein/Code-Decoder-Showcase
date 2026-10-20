@@ -40,7 +40,7 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 
 ---
 
-## ✨ Features
+##  Features
 
 | | Feature | Description |
 |---|---|---|
@@ -52,7 +52,7 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 | 📷 | **Flexible input** | Paste code, upload a file, or snap a photo of code |
 | 🌍 | **Bilingual** | Full English and Arabic support with RTL layout |
 | 🎨 | **Personalization** | Light/dark themes, profiles, and saved session history |
-| 📚 | **Algorithms library** | Classic sorting and searching algorithms with complexity badges |
+| 📚 | **Algorithms & Data Structures library** | Classic sorting and searching algorithms &  Data Structures  with complexity badges |
 
 ---
 
@@ -87,7 +87,7 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 
 ---
 
-## 🖥️ Website highlights
+## Website highlights
 
 - **Single scrolling page** — cover, intro, features, workflow, screenshots, about, feedback.
 - **Bilingual EN / AR** with automatic RTL layout and a remembered language choice.
@@ -98,21 +98,8 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 
 ---
 
-## 🛠️ Tech stack
 
-| Layer | Tools |
-|---|---|
-| Framework | TanStack Start, TanStack Router, React 19, TypeScript |
-| Styling | Tailwind CSS v4, semantic CSS design tokens |
-| UI | Radix UI / shadcn components, Lucide icons |
-| Data & validation | TanStack Query, Zod |
-| Backend | Lovable Cloud (database with row-level security) |
-| Testing | Vitest, Testing Library |
-| Tooling | Vite, Bun, ESLint, Prettier |
-
----
-
-## 🚀 Getting started
+##  Getting started
 
 ```sh
 git clone <your-repo-url>
@@ -133,22 +120,6 @@ bun run dev
 
 ---
 
-## 🗂️ Project structure
-
-```text
-src/
-├── assets/               # Managed image pointers (screens, branding)
-├── components/
-│   ├── site/             # Header, footer, page sections, feedback form
-│   └── ui/               # Shared UI primitives
-├── integrations/         # Generated backend clients and types
-├── lib/                  # i18n, image URLs, feedback schema + server function
-├── routes/               # Home page + legacy redirects (/features, /about, ...)
-├── test/                 # Validation and routing tests
-└── styles.css            # Theme tokens and animations
-```
-
----
 
 ## 💬 Feedback and privacy
 
@@ -175,8 +146,5 @@ Visitor form ──► Zod validation (client) ──► Server function ──�
 
 ---
 
-## 📄 License
-
-No open-source license is declared. CodeDecoder branding and screenshots belong to their owner and may not be redistributed without permission.
 
 <div align="center"><sub>Made with 💚 by the CodeDecoder team</sub></div>
