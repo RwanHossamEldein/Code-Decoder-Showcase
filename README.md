@@ -22,23 +22,7 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 
 </div>
 
----
 
-## Table of contents
-
-- [Features](#-features)
-- [Screenshots](#-screenshots)
-- [Website highlights](#-website-highlights)
-- [Tech stack](#-tech-stack)
-- [Getting started](#-getting-started)
-- [Project structure](#-project-structure)
-- [Feedback and privacy](#-feedback-and-privacy)
-- [Contributing](#-contributing)
-- [License](#-license)
-
-> This repository contains the **product website**, not the mobile app or its AI engine.
-
----
 
 ##  Features
 
@@ -99,52 +83,13 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 ---
 
 
-##  Getting started
 
-```sh
-git clone <your-repo-url>
-cd codedecoder-website
-bun install
-bun run dev
-```
+## Feedback & Contact
 
-| Command | Purpose |
-|---|---|
-| `bun run dev` | Start the dev server |
-| `bun run test` | Run the test suite |
-| `bun run lint` | Lint the code |
-| `bun run format` | Format with Prettier |
-| `bun run build` | Production build |
+For questions, feedback, or collaboration, feel free to contact us:
 
-**Environment:** the browser needs `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_SUPABASE_PROJECT_ID`; server functions need `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY`. Never commit secrets.
+ **Email:** [supportcodedecoder@gmail.com](mailto:supportcodedecoder@gmail.com)
 
----
-
-
-## 💬 Feedback and privacy
-
-```text
-Visitor form ──► Zod validation (client) ──► Server function ──► Zod validation (server)
-                                                   │
-                                                   ▼
-                               website_feedback table (insert-only, RLS, throttled)
-```
-
-- Fields: **name, email, message type, message**.
-- Spam protection: hidden honeypot, minimum fill time, per-email database throttle.
-- Visitors can only insert — they can never read submissions.
-- Email delivery is not configured; messages are stored in the backend.
-
----
-
-## 🤝 Contributing
-
-1. Create a branch: `git checkout -b feat/short-description`
-2. Keep English and Arabic copy in sync in `src/lib/i18n.tsx`.
-3. Run `bun run test` and `bun run lint`.
-4. Use [Conventional Commits](https://www.conventionalcommits.org/): `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`.
-
----
-
-
-<div align="center"><sub>Made with 💚 by the CodeDecoder team</sub></div>
+<div align="center">
+  <sub>Made with 💚 by the CodeDecoder team</sub>
+</div>
