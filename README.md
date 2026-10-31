@@ -8,15 +8,10 @@
 
 An AI-powered companion that explains code, visualizes algorithms, helps you debug, and teaches you to read code with confidence — in **English** and **Arabic**, on **mobile** and **web**.
 
-[![Website](https://img.shields.io/badge/Website-Live-8dc63f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://codedecoder-landing-page.lovable.app)
-[![Play Store](https://img.shields.io/badge/Google_Play-Coming_soon-555?style=for-the-badge&logo=googleplay&logoColor=white)](#)
+[![Website](https://img.shields.io/badge/Website-Coming_Soon-555?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Play Store](https://img.shields.io/badge/Google_Play-Coming_Soon-555?style=for-the-badge&logo=googleplay&logoColor=white)](#)
 
-![React](https://img.shields.io/badge/React_19-20232a?logo=react&logoColor=61dafb)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white)
-![TanStack](https://img.shields.io/badge/TanStack_Start-ff4154?logo=reactquery&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_v4-06b6d4?logo=tailwindcss&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-6e9f18?logo=vitest&logoColor=white)
+🔗 **Explore our Landing Page:** [CodeDecoder Landing Page]([YOUR_LANDING_PAGE_URL](https://codedecoder-landing-page.lovable.app/))
 
 <img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/d29a2e1b-754c-4d78-a5bb-c43c2a7c3251/banner.webp" alt="CodeDecoder banner" width="100%" />
 
