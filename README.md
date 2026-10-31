@@ -11,7 +11,7 @@ An AI-powered companion that explains code, visualizes algorithms, helps you deb
 [![Website](https://img.shields.io/badge/Website-Coming_Soon-555?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
 [![Play Store](https://img.shields.io/badge/Google_Play-Coming_Soon-555?style=for-the-badge&logo=googleplay&logoColor=white)](#)
 
-🔗 **Explore our Landing Page:** [CodeDecoder Landing Page]([YOUR_LANDING_PAGE_URL](https://codedecoder-landing-page.lovable.app/))
+🔗 **Explore our Landing Page:** [CodeDecoder Landing Page]([https://codedecoder-landing-page.lovable.app/])
 
 <img src="https://codedecoder-landing-page.lovable.app/__l5e/assets-v1/d29a2e1b-754c-4d78-a5bb-c43c2a7c3251/banner.webp" alt="CodeDecoder banner" width="100%" />
 
